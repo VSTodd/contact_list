@@ -1,0 +1,24 @@
+<div>
+  <h1>Contact Tracker</h1>
+  <a href="/new">Add New Contact</a>
+  <p>Display Contacts by Category:</p>
+  <ul>
+    <li><a href="/contacts/family">Family</a></li>
+    <li><a href="/contacts/friends">Friends</a></li>
+    <li><a href="/contacts/work">Work</a></li>
+    <li><a href="/contacts/other">Other</a></li>
+    <li><a href="/contacts/all">Display All</a></li>
+  </ul>
+
+  <% if session[:user] %>
+    <form action="/users/signout" method="post">
+      <p class='inline'>Signed in as <%= session[:user] %></p>
+      <button type="signout">Sign Out</button>
+    </form>
+  <% else %>
+    <form action="/users/signin" method="get">
+      <button type="signin">Sign In</button>
+    </form>
+  <% end %>
+</div>
+

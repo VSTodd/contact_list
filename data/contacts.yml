@@ -1,0 +1,5 @@
+---
+- name: Sample
+  phone: "(555) 555-5555"
+  email: email@user.com
+  type: other

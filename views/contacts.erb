@@ -1,0 +1,10 @@
+<h2><%= @title %></h2>
+<ul>
+  <% @contacts.each do |contact| %>
+  <li>
+    <a href="/contacts/entry/<%= contact['name'] %>"><%= contact['name'] %></a>
+  </li>
+  <% end %>
+</ul>
+
+<a href="/">Back</a>

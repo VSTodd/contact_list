@@ -1,0 +1,18 @@
+<ul>
+  <li><strong>Name:</strong> <%= @entry["name"] %></li>
+  <li><strong>Phone Number:</strong> <%= @entry["phone"] %></li>
+  <li><strong>Email:</strong> <a href=mailto:<%= @entry["email"] %>><%= @entry["email"] %></a></li>
+  <li><strong>Category:</strong> <%= @entry["type"].capitalize %></li>
+</ul>
+
+<form class="inline" action="/contacts/entry/<%= @entry["name"] %>/edit" method="get">
+  <button type="edit">Edit</button>
+</form>
+<form class="inline" action="/contacts/entry/<%= @entry["name"] %>/delete" method="post">
+  <button type="delete">Delete</button>
+</form>
+
+<div>
+  <p></p>
+  <a href="/">Home</a>
+</div>

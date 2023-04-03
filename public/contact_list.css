@@ -1,0 +1,32 @@
+input {
+  display: block;
+}
+
+div > input {
+  display: inline;
+}
+
+input[type="radio"]{
+  margin: 0 20px 0 0;
+}
+
+fieldset {
+  display: inline-block;
+}
+
+button.submit {
+  display: block;
+  margin-top: 20px;
+}
+
+.message {
+  background-color: lavender;
+}
+
+li {
+  list-style-type: "\1F539";
+}
+
+.inline {
+  display: inline-block;
+}

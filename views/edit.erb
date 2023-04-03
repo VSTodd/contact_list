@@ -1,0 +1,29 @@
+<form action="/edit" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value=<%= @entry["name"] %>>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" value=<%= phone_strip(@entry["phone"]) %>>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" value=<%= @entry["email"] %>>
+  <fieldset>
+    <legend>Category:</legend>
+
+    <div>
+      <label for="friend">Friend</label>
+      <input type="radio" id="friend" value="friend" name="type">
+
+      <label for="family">Family</label>
+      <input type="radio" id="family" value="family" name="type">
+
+      <label for="work">Work</label>
+      <input type="radio" id="work" value="work" name="type">
+
+      <label for="other">Other</label>
+      <input type="radio" id="other" value="other" name="type">
+    </div>
+  </fieldset>
+
+  <button class="submit" type="save_changes">Save changes</button>
+</form>
